@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedback_students",
+  "info": {
+    "singularName": "feedback-student",
+    "pluralName": "feedback-students",
+    "displayName": "Feedback-Student"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "studentName": {
+      "type": "string"
+    },
+    "studentEmail": {
+      "type": "string"
+    },
+    "projectName": {
+      "type": "string"
+    },
+    "score": {
+      "type": "integer"
+    },
+    "evaluationDate": {
+      "type": "datetime"
+    },
+    "overallEvaluation": {
+      "type": "string"
+    },
+    "codingIssues": {
+      "type": "text"
+    },
+    "finalNotes": {
+      "type": "text"
+    },
+    "interviewMistakes": {
+      "type": "text"
+    },
+    "mistakeQ": {
+      "type": "json"
+    },
+    "feedback": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "feedback_student"
+    },
+    "strengthPoints": {
+      "type": "text"
+    },
+    "RecommendedLearningPath": {
+      "type": "text"
+    },
+    "Strengths": {
+      "type": "integer"
+    },
+    "TopicstoStudy": {
+      "type": "string"
+    }
+  }
+}
